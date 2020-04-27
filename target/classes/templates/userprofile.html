@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	  	<title>Social Media Login Example</title>
+	  	<meta charset="utf-8" />
+	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+	  	<link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
+	</head>
+	<body>
+		<div class="container">
+	  		<div class="row">
+	    		<h2 style="text-align:center">Logged In User</h2> 
+	    		
+	    		<h4>Welcome</h4>
+	    		<h3 th:text="${user.firstName+'  '+user.lastName}"></h3>
+	    		<a th:href="@{'/'}"  style="background: #3AACED">Log Out</a>
+  			</div>
+  		</div>
+	</body>
+</html> 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<head>
+	  	<title>Facebook Sign Up</title>
+	  	<meta charset="utf-8" />
+	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+	  	<link rel="stylesheet" th:href="@{/css/style.css}"/>
+	</head>
+	</head>
+<body>
+
+		<h2 style="text-align:center">Facebook Sign Up Details</h2>
+		<div class="col">
+	        <form th:action="@{'/register'}" th:object="${user}" method="post">
+		        First Name:<input type="text" name="firstName" placeholder="first name" required="required" th:value="${user.firstName}"/> <br></br>
+		        Last Name:<input type="text" name="lastName" placeholder="last name" required="required" th:value="${user.lastName}"  /><br></br>
+		        Email:<input type="text" name="email" placeholder="email" required="required" th:value="${user.email}" size="26" /><br></br>
+		        Password:<input type="password" name="password" placeholder="Password" required="required" /><br></br>
+		        <input type="submit" value="Register" />
+	        </form>
+      	</div>
+
+</body>
+</html>
